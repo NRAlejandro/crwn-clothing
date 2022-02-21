@@ -25,7 +25,7 @@ const Header = ({ currentUser, hidden }) => (
         </LogoContainer>
         <OptionsContainer>
             <OptionLink to='/shop'>SHOP</OptionLink>
-            <OptionLink to='/contact'>CONTACT</OptionLink>
+            <OptionLink to={{ pathname: "https://www.linkedin.com/in/nicolasalejandroramirez/" }} target="_blank" >CONTACT</OptionLink>
             {currentUser ? (
                 <OptionLink as='div' onClick={() => auth.signOut()}>SIGN OUT</OptionLink>
             ) : (
