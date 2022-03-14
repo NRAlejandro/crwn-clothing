@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 
-if (process.env.NODE_ENV != 'production') require('dotenv').config();
+if (process.env.NODE_ENV !== 'production') require('dotenv').config();
 
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
@@ -34,9 +34,9 @@ app.post('/payment', (req, res) => {
 
     stripe.charges.create(body, (stripeErr, stripeRes) => {
         if (stripeErr) {
-            res.status(500).send({ error: stripeErr })
+            res.status(500).send({ error: stripeErr });
         } else {
-            res.status(200).send({ success: stripeRes })
+            res.status(200).send({ success: stripeRes });
         }
     });
-})
+});
