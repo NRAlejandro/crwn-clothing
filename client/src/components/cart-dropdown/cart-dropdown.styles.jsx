@@ -29,4 +29,6 @@ export const CartItemsContainer = styled.div`
     display: flex;
     flex-direction: column;
     overflow: scroll;
+    ::-webkit-scrollbar{width:5px;border-left:1px solid #ffffff;}
+    ::-webkit-scrollbar-thumb{background-color:#8a8888;}
 `;
